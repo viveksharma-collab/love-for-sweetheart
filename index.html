@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff3f6">
+  <meta name="description" content="A tiny romantic world, made just for you.">
+  <title>For My Sweetheart 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main id="app">
+    <section class="screen screen-dream active" id="screen-hearts" aria-labelledby="hearts-title">
+      <div class="ambient-glow glow-one" aria-hidden="true"></div>
+      <div class="ambient-glow glow-two" aria-hidden="true"></div>
+      <div class="heart-field" id="heart-field" aria-label="Floating hearts. Click a heart to reveal a message."></div>
+      <div class="screen-content hearts-content">
+        <div class="eyebrow"><span class="eyebrow-line"></span> A LITTLE NOTE FOR YOU <span class="eyebrow-line"></span></div>
+        <span class="tiny-heart" aria-hidden="true">♡</span>
+        <h1 id="hearts-title">A tiny world made<br class="desktop-break"> just for you <span>💕</span></h1>
+        <p class="intro-copy">Click a heart and discover your name, sweetheart 💕</p>
+        <button class="button button-primary open-world" id="open-world" type="button">
+          Open my little world <span aria-hidden="true">✨</span>
+        </button>
+      </div>
+      <div class="corner-doodle doodle-left" aria-hidden="true">✦</div>
+      <div class="corner-doodle doodle-right" aria-hidden="true">♡</div>
+    </section>
+
+    <section class="screen" id="screen-password" aria-labelledby="password-title" aria-hidden="true">
+      <div class="ambient-glow glow-one" aria-hidden="true"></div>
+      <div class="ambient-glow glow-two" aria-hidden="true"></div>
+      <div class="letter-card">
+        <div class="card-stamp" aria-hidden="true">💌</div>
+        <div class="eyebrow">JUST BETWEEN US</div>
+        <h1 id="password-title">Hlo Sweet Heart <span>💗</span></h1>
+        <p class="card-copy">Before you enter my little world, answer one question only you know.</p>
+        <form id="password-form" novalidate>
+          <label for="sweet-answer">Tumhari pahli mulakat konsi class mein hui thi?</label>
+          <input id="sweet-answer" name="answer" type="text" placeholder="Type your answer here, sweetheart..." autocomplete="off" enterkeyhint="go" required>
+          <p class="form-message" id="password-error" role="status" aria-live="polite"></p>
+          <button class="button button-primary button-wide" type="submit">Unlock with love <span aria-hidden="true">♡</span></button>
+        </form>
+        <div class="card-footer"><span aria-hidden="true">♡</span> a tiny secret, just for us <span aria-hidden="true">♡</span></div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-invitation" aria-labelledby="invitation-title" aria-hidden="true">
+      <div class="ambient-glow glow-one" aria-hidden="true"></div>
+      <div class="ambient-glow glow-two" aria-hidden="true"></div>
+      <div class="letter-card invitation-card">
+        <div class="illustration-orbit" aria-hidden="true"><span>♡</span><i>✦</i><b>♡</b></div>
+        <div class="eyebrow">I HAVE A VERY IMPORTANT QUESTION</div>
+        <h1 id="invitation-title">Will you go on a<br> date with me? <span>🥹💗</span></h1>
+        <p class="card-copy">Just you, me, and a beautiful little memory waiting to happen.</p>
+        <div class="button-stage" id="button-stage">
+          <button class="button button-primary yes-button" id="yes-button" type="button">Yes, pagluuu! 💗</button>
+          <button class="button button-shy no-button" id="no-button" type="button" aria-label="No, but this button is feeling shy">No 🙈</button>
+        </div>
+        <p class="soft-note">I already know which answer I'm hoping for <span aria-hidden="true">♡</span></p>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-date" aria-labelledby="date-title" aria-hidden="true">
+      <div class="ambient-glow glow-one" aria-hidden="true"></div>
+      <div class="ambient-glow glow-two" aria-hidden="true"></div>
+      <div class="letter-card date-card">
+        <div class="card-stamp" aria-hidden="true">🌷</div>
+        <div class="eyebrow">LET'S MAKE A LITTLE MEMORY</div>
+        <h1 id="date-title">Yayyy, bacchuu! <span>💗</span></h1>
+        <p class="card-copy">Which date are you free? Pick a day for our little date <span aria-hidden="true">💌</span></p>
+        <form id="date-form" novalidate>
+          <label for="date-input">Our special day</label>
+          <div class="date-input-wrap"><span aria-hidden="true">♡</span><input id="date-input" name="date" type="date" required></div>
+          <p class="date-preview" id="date-preview" aria-live="polite">Your lovely day will show up here</p>
+          <p class="form-message" id="date-error" role="status" aria-live="polite"></p>
+          <p class="form-message form-message-success" id="date-notice" role="status" aria-live="polite"></p>
+          <button class="button button-primary button-wide" type="submit">This date? <span aria-hidden="true">🥰</span></button>
+        </form>
+        <div class="card-footer"><span aria-hidden="true">✦</span> any day with you is a good day <span aria-hidden="true">✦</span></div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-confirm" aria-labelledby="confirm-title" aria-hidden="true">
+      <div class="ambient-glow glow-one" aria-hidden="true"></div>
+      <div class="ambient-glow glow-two" aria-hidden="true"></div>
+      <div class="letter-card confirm-card">
+        <div class="calendar-illustration" aria-hidden="true"><span>♡</span><span>♡</span><span>♡</span></div>
+        <div class="eyebrow">ONE TINY QUESTION, SWEETHEART</div>
+        <h1 id="confirm-title">One tiny question,<br> sweetheart <span>💕</span></h1>
+        <p class="confirm-question">Kahi uss din Saturday ya Wednesday toh nahi?</p>
+        <div class="chosen-date" id="chosen-date"></div>
+        <div class="confirm-actions">
+          <button class="button button-primary" id="date-is-blocked" type="button">Yes, hai 😅</button>
+          <button class="button button-soft" id="date-is-free" type="button">No, nahi hai 💖</button>
+        </div>
+        <p class="soft-note">Either way, I'm just happy it's with you <span aria-hidden="true">♡</span></p>
+      </div>
+    </section>
+
+    <section class="screen screen-thanks" id="screen-thanks" aria-labelledby="thanks-title" aria-hidden="true">
+      <div class="ambient-glow glow-one" aria-hidden="true"></div>
+      <div class="ambient-glow glow-two" aria-hidden="true"></div>
+      <div class="thank-you-content">
+        <div class="thank-you-hearts" aria-hidden="true"><span>♡</span><span>♥</span><span>♡</span></div>
+        <div class="eyebrow">OUR LITTLE STORY STARTS HERE</div>
+        <h1 id="thanks-title">Thank you,<br> princess! <span>💖</span></h1>
+        <p class="thank-you-copy">Yayyy! I can't wait to spend a lovely day with you. You make even the simplest moments feel special. <span>🥹💗</span></p>
+        <div class="final-date" id="final-date"></div>
+        <button class="button button-primary" id="restart-button" type="button">Start our little story again <span aria-hidden="true">💞</span></button>
+        <p class="signature">made with all my love <span aria-hidden="true">♡</span></p>
+      </div>
+      <div class="celebration-field" id="celebration-field" aria-hidden="true"></div>
+    </section>
+  </main>
+</body>
+</html>
